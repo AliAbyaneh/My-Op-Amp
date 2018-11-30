@@ -1,0 +1,12 @@
+*.model TIP41	ako:NSC_4A	NPN()	; case TO-220
+.MODEL TIP41-X	   NPN( Is=457.5f Xti=3 Eg=1.11 Vaf=50 Bf=55 Ise=1.346p Ne=1.34 
++ Ikf=3.296 Nk=.5961 Xtb=2.2 Br=7.639 Isc=604.1f Nc=2.168 Ikr=8.131m Rc=91.29m 
++ Cjc=278.7p Mjc=.385 Vjc=.75 Fc=.5 Cje=433p Mje=.5 Vje=.75 Tr=1.412u 
++ Tf=37.34n Itf=35.68 Xtf=1.163 Vtf=10 Rb=.1) 
+*$
+*.model TIP42	ako:NSC_5A	PNP()	; case TO-220
+.MODEL TIP42-X	   PNP( Is=66.19f Xti=3 Eg=1.11 Vaf=100 Bf=50 Ise=862.2f 
++ Ne=1.481 Ikf=1.642 Nk=.5695 Xtb=2 Br=5.88 Isc=273.5f Nc=1.24 Ikr=3.555 
++ Rc=79.39m Cjc=870.4p Mjc=.6481 Vjc=.75 Fc=.5 Cje=390.1p Mje=.4343 Vje=.75 
++ Tr=235.4n Tf=23.21n Itf=71.33 Xtf=5.982 Vtf=10 Rb=.1) 
+*$

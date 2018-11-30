@@ -1,0 +1,295 @@
+
+**** 01/03/17 16:53:54 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * C:\Users\abyan\Documents\UT-951\ELECII\project\project2\Schematic2.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.2
+* Tue Jan 03 16:53:51 2017
+
+
+
+** Analysis setup **
+.DC LIN V_V3 -40mv 40mv 0.01 
+.tran 0ns 2ms
+.four 1khz 5 V([$N_0015])
+.LIB "C:\Users\abyan\Documents\UT-951\ELECII\project\project2\Schematic2.lib"
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "Schematic2.net"
+
+
+
+**** INCLUDING Schematic2.net ****
+* Schematics Netlist *
+
+
+
+Q_Q6         $N_0002 $N_0001 0 BC107A 
+Q_Q5         $N_0001 $N_0001 0 BC107A 
+Q_Q4         $N_0003 $N_0003 $N_0004 BC177 
+Q_Q3         $N_0005 $N_0003 $N_0004 BC177 
+M_M1         $N_0007 $N_0006 $N_0002 $N_0002 M2N7000
+R_Rb1         $N_0006 $N_0004  400M  
+R_Rb2         0 $N_0006  600M  
+R_Rb3         $N_0008 $N_0004  400M  
+R_Rb4         0 $N_0008  600M  
+M_M2         $N_0009 $N_0008 $N_0002 $N_0002 M2N7000
+V_V1         $N_0004 0 12v
+Q_Q1         $N_0010 $N_0007 $N_0005 BC177 
+Q_Q2         $N_0011 $N_0009 $N_0005 BC177 
+Q_Q9         $N_0013 $N_0012 $N_0014 BC107A 
+R_RL         0 $N_0015  8  
+V_VCC         $N_0013 0 12v
+V_VEE         0 $N_0016 12v
+R_Re3         $N_0017 $N_0013  75  
+R_Re4         $N_0016 $N_0014  75  
+R_R1         $N_0001 $N_0003  750  
+R_Rc2         0 $N_0011  950  
+R_Rc1         0 $N_0010  950  
+R_Rd2         $N_0009 $N_0004  110  
+R_Rd1         $N_0007 $N_0004  110  
+E_DIFF3         $N_0018 0 VALUE {V($N_0010,$N_0011)}
+C_C6         $N_0018 $N_0012  1  
+R_Re1         $N_0015 $N_0019  1.5  
+R_Re2         $N_0020 $N_0015  1.5  
+Q_Q20         $N_0016 $N_0012 $N_0017 BC179B 
+R_Rb42         $N_0016 $N_0012  600  
+Q_Q10         $N_0013 $N_0017 $N_0019 TIP41-X
+Q_Q7         $N_0016 $N_0014 $N_0020 TIP42-X
+R_Rb32         $N_0012 $N_0013  600  
+V_V3         $N_0006 $N_0008  
++SIN 0 19mv 1khz 0 0 0
+
+**** RESUMING Schematic2.cir ****
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END
+
+**** 01/03/17 16:53:54 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * C:\Users\abyan\Documents\UT-951\ELECII\project\project2\Schematic2.sch
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               TIP41-X         TIP42-X         BC107A          BC177           
+               NPN             PNP             NPN             PNP             
+          IS  457.500000E-15   66.190000E-15    7.049000E-15  336.700000E-15 
+          BF   55              50             375.5           154.4          
+          NF    1               1               1               1            
+         VAF   50             100             116.3            55.46         
+         IKF    3.296           1.642           4.589            .2994       
+         ISE    1.346000E-12  862.200000E-15    7.049000E-15  412.100000E-15 
+          NE    1.34            1.481           1.281           1.429        
+          BR    7.639           5.88            2.611           3.99         
+          NR    1               1               1               1            
+         IKR    8.131000E-03    3.555           5.313           9.726        
+         ISC  604.100000E-15  273.500000E-15  121.700000E-12    1.030000E-09 
+          NC    2.168           1.24            1.865           1.958        
+          NK     .5961           .5695                           .7028       
+          RB     .1              .1                                          
+          RC     .09129          .07939         1.464           1.833        
+         CJE  433.000000E-12  390.100000E-12   11.500000E-12   33.000000E-12 
+         VJE                                     .5              .5          
+         MJE     .5              .4343           .2717           .3333       
+         CJC  278.700000E-12  870.400000E-12    5.380000E-12   11.000000E-12 
+         VJC                                     .6218           .5          
+         MJC     .385            .6481           .329            .2223       
+          TF   37.340000E-09   23.210000E-09  451.000000E-12  847.700000E-12 
+         XTF    1.163           5.982          17.43           23.26         
+         VTF   10              10              10              10            
+         ITF   35.68           71.33            6.194           2.198        
+          TR    1.412000E-06  235.400000E-09   10.000000E-09   10.000000E-09 
+         XTB    2.2             2               1.5             1.5          
+          CN    2.42            2.2             2.42            2.2          
+           D     .87             .52             .87             .52         
+
+
+               BC179B          
+               PNP             
+          IS  336.700000E-15 
+          BF  271.9          
+          NF    1            
+         VAF   30.75         
+         IKF     .2462       
+         ISE    2.821000E-12 
+          NE    1.925        
+          BR    3.009        
+          NR    1            
+         IKR    8.143        
+         ISC    1.753000E-09 
+          NC    2.075        
+          NK     .5416       
+          RC    1.803        
+         CJE   33.000000E-12 
+         VJE     .5          
+         MJE     .3333       
+         CJC   11.000000E-12 
+         VJC     .5          
+         MJC     .2223       
+          TF  846.000000E-12 
+         XTF   18.27         
+         VTF   10            
+         ITF    1.546        
+          TR   10.000000E-09 
+         XTB    1.5          
+          CN    2.2          
+           D     .52         
+
+
+**** 01/03/17 16:53:54 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * C:\Users\abyan\Documents\UT-951\ELECII\project\project2\Schematic2.sch
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               M2N7000         
+               NMOS            
+       LEVEL    3            
+           L    2.000000E-06 
+           W     .12         
+         VTO    1.73         
+          KP    1.073000E-06 
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          RD     .5489       
+          RS     .02         
+          RG  546.2          
+          RB    1.000000E-03 
+         RDS   48.000000E+06 
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+         CBD   74.460000E-12 
+          CJ    0            
+        CJSW    0            
+        CGSO   73.610000E-12 
+        CGDO    6.487000E-12 
+        CGBO    0            
+         TOX    2.000000E-06 
+          XJ    0            
+       UCRIT   10.000000E+03 
+       DELTA    0            
+         ETA    0            
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    0            
+       XPART    0            
+
+
+**** 01/03/17 16:53:54 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * C:\Users\abyan\Documents\UT-951\ELECII\project\project2\Schematic2.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)     .7326                   ($N_0002)    4.9943                       
+
+($N_0003)   11.3660                   ($N_0004)   12.0000                       
+
+($N_0005)   11.8170                   ($N_0006)    7.2000                       
+
+($N_0007)   11.2040                   ($N_0008)    7.2000                       
+
+($N_0009)   11.2040                   ($N_0010)    6.4972                       
+
+($N_0011)    6.4972                   ($N_0012)     .0190                       
+
+($N_0013)   12.0000                   ($N_0014)    -.7727                       
+
+($N_0015)    -.0022                   ($N_0016)  -12.0000                       
+
+($N_0017)     .7148                   ($N_0018)-12.99E-12                       
+
+($N_0019)     .0654                   ($N_0020)    -.0702                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.404E+01
+    V_VCC       -3.629E-01
+    V_VEE       -3.632E-01
+    V_V3         0.000E+00
+
+    TOTAL POWER DISSIPATION   2.97E+02  WATTS
+
+
+**** 01/03/17 16:53:54 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * C:\Users\abyan\Documents\UT-951\ELECII\project\project2\Schematic2.sch
+
+
+ ****     FOURIER ANALYSIS                 TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+FOURIER COMPONENTS OF TRANSIENT RESPONSE V($N_0015)
+
+
+
+ DC COMPONENT =   4.257055E-02
+
+ HARMONIC   FREQUENCY    FOURIER    NORMALIZED    PHASE        NORMALIZED
+    NO         (HZ)     COMPONENT    COMPONENT    (DEG)       PHASE (DEG)
+
+     1     1.000E+03    8.280E+00    1.000E+00   -1.817E-02    0.000E+00
+     2     2.000E+03    8.265E-02    9.982E-03   -8.945E+01   -8.941E+01
+     3     3.000E+03    5.341E-01    6.451E-02    3.701E-01    4.246E-01
+     4     4.000E+03    5.399E-02    6.520E-03    8.761E+01    8.768E+01
+     5     5.000E+03    3.880E-02    4.686E-03    1.743E+02    1.744E+02
+
+
+     TOTAL HARMONIC DISTORTION =   6.576998E+00 PERCENT
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .03
+

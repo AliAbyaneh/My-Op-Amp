@@ -1,0 +1,6 @@
+ lib=C:\Users\abyan\Documents\UT-951\ELECII\project\project2\Schematic2.lib, offset=46, size=333
+ lib=C:\Users\abyan\Documents\UT-951\ELECII\project\project2\Schematic2.lib, offset=378, size=290
+ lib="C:\Program Files\Orcad\Capture\Library\PSpice\pwrmos.lib", offset=15404, size=1713
+ lib="C:\Program Files\Orcad\Capture\Library\PSpice\ebipolar.lib", offset=761, size=368
+ lib="C:\Program Files\Orcad\Capture\Library\PSpice\ebipolar.lib", offset=3328, size=364
+ lib="C:\Program Files\Orcad\Capture\Library\PSpice\ebipolar.lib", offset=4832, size=382

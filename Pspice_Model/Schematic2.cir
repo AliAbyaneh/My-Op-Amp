@@ -1,0 +1,24 @@
+* C:\Users\abyan\Documents\UT-951\ELECII\project\project2\Schematic2.sch
+
+* Schematics Version 9.2
+* Tue Jan 03 16:53:51 2017
+
+
+
+** Analysis setup **
+.DC LIN V_V3 -40mv 40mv 0.01 
+.tran 0ns 2ms
+.four 1khz 5 V([$N_0015])
+.LIB "C:\Users\abyan\Documents\UT-951\ELECII\project\project2\Schematic2.lib"
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "Schematic2.net"
+
+
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END
